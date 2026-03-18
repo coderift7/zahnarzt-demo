@@ -111,18 +111,21 @@ export const siteConfig = {
       text: "Endlich eine Praxis, in der man sich wirklich wohlfühlt! Dr. Weber hat sich so viel Zeit genommen und alles genau erklärt. Die Prophylaxe war gründlich und trotzdem angenehm.",
       name: "Claudia M.",
       location: "Berlin-Prenzlauer Berg",
+      image: "/images/testimonial-claudia.png",
     },
     {
       rating: 5,
       text: "Als Angstpatient habe ich mich jahrelang vor dem Zahnarzt gedrückt. Hier wurde ich so einfühlsam behandelt, dass ich jetzt sogar gerne zur Kontrolle komme. Absolute Empfehlung!",
       name: "Michael S.",
       location: "Berlin-Mitte",
+      image: "/images/testimonial-michael.png",
     },
     {
       rating: 5,
       text: "Online Termin gebucht, keine Wartezeit, super freundliches Team. Meine Kinder gehen jetzt sogar gerne zum Zahnarzt — das sagt doch alles!",
       name: "Anna & Frank L.",
       location: "Berlin-Pankow",
+      image: "/images/testimonial-anna-frank.png",
     },
   ],
 

@@ -4,6 +4,8 @@ import { Star, Quote } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Reveal, StaggerContainer, StaggerItem } from "./Motion";
 
+const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
+
 export default function Testimonials() {
   return (
     <section id="bewertungen" className="relative overflow-hidden bg-muted py-24 lg:py-32">
@@ -56,9 +58,12 @@ export default function Testimonials() {
 
                 {/* Author */}
                 <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent/70 font-heading text-sm font-bold text-white">
-                    {testimonial.name.charAt(0)}
-                  </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${basePath}${testimonial.image}`}
+                    alt={testimonial.name}
+                    className="h-10 w-10 rounded-full object-cover"
+                  />
                   <div>
                     <div className="text-sm font-semibold text-primary">
                       {testimonial.name}
