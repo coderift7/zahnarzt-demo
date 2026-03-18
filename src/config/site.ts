@@ -38,36 +38,42 @@ export const siteConfig = {
       title: "Prophylaxe & PZR",
       description:
         "Professionelle Zahnreinigung und individuelle Vorsorge – für gesunde Zähne ein Leben lang.",
+      image: "/images/service-prophylaxe.png",
     },
     {
       icon: "Smile",
       title: "Zahnästhetik",
       description:
         "Bleaching, Veneers und unsichtbare Korrekturen für Ihr strahlendes Lächeln.",
+      image: "/images/service-aesthetik.png",
     },
     {
       icon: "ShieldCheck",
       title: "Implantate",
       description:
         "Festsitzender Zahnersatz auf höchstem Niveau — schonend eingesetzt, natürlich aussehend.",
+      image: "/images/service-implantate.png",
     },
     {
       icon: "Baby",
       title: "Kinderzahnheilkunde",
       description:
         "Einfühlsame Behandlung für die Kleinsten — damit der Zahnarztbesuch Spaß macht.",
+      image: "/images/service-kinder.png",
     },
     {
       icon: "Scan",
       title: "Digitale Diagnostik",
       description:
         "Modernste 3D-Röntgentechnik für präzise Diagnosen bei minimaler Strahlung.",
+      image: "/images/service-diagnostik.png",
     },
     {
       icon: "HeartPulse",
       title: "Angstpatienten",
       description:
         "Einfühlsame Betreuung, Dämmerschlaf und schmerzfreie Verfahren für entspannte Behandlungen.",
+      image: "/images/service-angstpatienten.png",
     },
   ],
 
