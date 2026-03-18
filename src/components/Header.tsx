@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
+import { ToothIcon } from "./ToothIcon";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,10 +38,7 @@ export default function Header() {
                   : "bg-white/15 text-white backdrop-blur-sm"
               }`}
             >
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 5.5c1.5-2 4-2.5 5.5-1s1.5 4-.5 6.5L12 17l-5-6c-2-2.5-2-5-.5-6.5s4-1 5.5 1z" />
-                <path d="M12 17v4" />
-              </svg>
+              <ToothIcon className="h-5 w-5" />
             </div>
             <span
               className={`font-heading text-lg font-bold tracking-tight transition-colors duration-300 ${

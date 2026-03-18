@@ -22,6 +22,9 @@ const siteUrl = "https://coderift7.github.io/zahnarzt-demo";
 export const metadata: Metadata = {
   title: siteConfig.meta.title,
   description: siteConfig.meta.description,
+  icons: {
+    icon: `${siteUrl}/favicon.svg`,
+  },
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/",
