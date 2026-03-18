@@ -3,7 +3,6 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
-import { ToothIcon } from "./ToothIcon";
 
 export default function Footer() {
   return (
@@ -15,12 +14,37 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Company */}
           <div>
-            <div className="mb-5 flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/15">
-                <ToothIcon className="h-4 w-4 text-accent" />
+            <div className="mb-5 flex items-center gap-3">
+              <svg viewBox="0 0 32 32" fill="none" className="h-8 w-8 shrink-0">
+                <defs>
+                  <linearGradient id="toothGradF" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#22D3EE" />
+                    <stop offset="100%" stopColor="#2DD4BF" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M16 3C12.2 3 10 5 9 7c-1.3 2.5-.5 5.5.5 8 .75 1.9 1.75 4.25 2.5 7 .6 2.3 1.4 4 2.3 4 .5-.2.8-1.5 1-2.5.2-1 .3-1.5.5-1.5s.3.5.5 1.5c.2 1 .5 2.3 1 2.5.9 0 1.7-1.7 2.3-4 .75-2.75 1.75-5.1 2.5-7 1-2.5 1.8-5.5.5-8C21.5 5 19.3 3 16 3z"
+                  fill="url(#toothGradF)"
+                />
+                <path
+                  d="M12.5 8c.8-1.2 1.8-2.2 3.8-2.2"
+                  stroke="white"
+                  strokeOpacity="0.25"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <div>
+                <span className="block text-xs font-light tracking-wide text-white/50">Dr.</span>
+                <span className="block font-heading text-lg font-bold leading-tight tracking-tight text-white">
+                  Weber
+                </span>
               </div>
-              <span className="font-heading text-lg font-bold tracking-tight">
-                {siteConfig.company.name}
+              <div className="h-7 w-px bg-white/10" />
+              <span className="text-[10px] font-medium uppercase tracking-[0.15em] leading-tight text-white/35">
+                Zahnarzt
+                <br />
+                praxis
               </span>
             </div>
             <p className="text-sm leading-relaxed text-white/45">

@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
-import { ToothIcon } from "./ToothIcon";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,23 +29,60 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
-          <a href="#" className="group flex items-center gap-2.5">
-            <div
-              className={`flex h-9 w-9 items-center justify-center rounded-lg transition-all duration-300 ${
-                isScrolled
-                  ? "bg-accent text-white"
-                  : "bg-white/15 text-white backdrop-blur-sm"
-              }`}
-            >
-              <ToothIcon className="h-5 w-5" />
+          <a href="#" className="group flex items-center gap-3">
+            {/* Tooth icon */}
+            <svg viewBox="0 0 32 32" fill="none" className="h-9 w-9 shrink-0">
+              <defs>
+                <linearGradient id="toothGradH" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#0891B2" />
+                  <stop offset="100%" stopColor="#0D9488" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M16 3C12.2 3 10 5 9 7c-1.3 2.5-.5 5.5.5 8 .75 1.9 1.75 4.25 2.5 7 .6 2.3 1.4 4 2.3 4 .5-.2.8-1.5 1-2.5.2-1 .3-1.5.5-1.5s.3.5.5 1.5c.2 1 .5 2.3 1 2.5.9 0 1.7-1.7 2.3-4 .75-2.75 1.75-5.1 2.5-7 1-2.5 1.8-5.5.5-8C21.5 5 19.3 3 16 3z"
+                fill="url(#toothGradH)"
+              />
+              <path
+                d="M12.5 8c.8-1.2 1.8-2.2 3.8-2.2"
+                stroke="white"
+                strokeOpacity="0.35"
+                strokeWidth="1"
+                strokeLinecap="round"
+              />
+            </svg>
+            {/* Name + Tagline */}
+            <div className="flex items-center gap-3">
+              <div>
+                <span
+                  className={`block text-xs font-light tracking-wide transition-colors duration-300 ${
+                    isScrolled ? "text-muted-foreground" : "text-white/60"
+                  }`}
+                >
+                  Dr.
+                </span>
+                <span
+                  className={`block font-heading text-xl font-bold leading-tight tracking-tight transition-colors duration-300 ${
+                    isScrolled ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Weber
+                </span>
+              </div>
+              <div
+                className={`hidden h-8 w-px sm:block transition-colors duration-300 ${
+                  isScrolled ? "bg-border" : "bg-white/20"
+                }`}
+              />
+              <span
+                className={`hidden text-[10px] font-medium uppercase tracking-[0.15em] leading-tight sm:block transition-colors duration-300 ${
+                  isScrolled ? "text-muted-foreground" : "text-white/50"
+                }`}
+              >
+                Zahnarzt
+                <br />
+                praxis
+              </span>
             </div>
-            <span
-              className={`font-heading text-lg font-bold tracking-tight transition-colors duration-300 ${
-                isScrolled ? "text-primary" : "text-white"
-              }`}
-            >
-              {siteConfig.company.name}
-            </span>
           </a>
 
           {/* Desktop Nav */}
