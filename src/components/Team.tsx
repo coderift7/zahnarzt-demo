@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { Reveal, slideFromLeft, slideFromRight } from "./Motion";
 
+const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
+
 const statIcons = [Users, Award, BookOpen];
 const statColors = [
   "bg-accent/8 text-accent",
@@ -51,9 +53,12 @@ export default function Team() {
                   className="group rounded-2xl border border-border bg-card p-6 transition-shadow duration-300 hover:shadow-md"
                 >
                   {/* Avatar */}
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-cta font-heading text-xl font-bold text-white">
-                    {member.initials}
-                  </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${basePath}${member.image}`}
+                    alt={member.name}
+                    className="mb-4 h-20 w-20 rounded-2xl object-cover"
+                  />
                   <h3 className="font-heading text-base font-semibold text-primary">
                     {member.name}
                   </h3>

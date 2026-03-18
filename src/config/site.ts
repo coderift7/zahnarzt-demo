@@ -81,21 +81,21 @@ export const siteConfig = {
         role: "Zahnärztin & Praxisinhaberin",
         description:
           "Spezialisiert auf Implantologie und ästhetische Zahnmedizin. Über 20 Jahre Erfahrung.",
-        initials: "SW",
+        image: "/images/team-weber.png",
       },
       {
         name: "Dr. Thomas Richter",
         role: "Zahnarzt",
         description:
           "Schwerpunkt Endodontie und Parodontologie. Besonders einfühlsam mit Angstpatienten.",
-        initials: "TR",
+        image: "/images/team-richter.png",
       },
       {
         name: "Maria Hoffmann",
         role: "Prophylaxe-Spezialistin",
         description:
           "Zertifizierte Dentalhygienikerin mit Zusatzausbildung in ganzheitlicher Zahnpflege.",
-        initials: "MH",
+        image: "/images/team-hoffmann.png",
       },
     ],
     stats: [
